@@ -85,7 +85,7 @@ export const ChartPlayground = () => {
 
     return (
         <div className="playground-container">
-            <h2>🎨 Chart Playground</h2>
+            <h2> Chart Playground</h2>
             <div className="playground-content">
                 <div className="controls">
                     <h3>Chart Settings</h3>
