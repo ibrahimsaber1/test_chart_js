@@ -30,10 +30,10 @@ export const LineGraph = () => {
     const options = {}
 
     // const options = {
-    //     responsive: true,
+    //     // responsive: true,
     //     plugins: {
-    //     legend: { position: "top" },
-    //     title: { display: true, text: "Monthly Sales" },
+    //     legend: { position: "bottom" },
+    //     title: { display: true, text: "weekly steps" },
     //     },
     // };
 
