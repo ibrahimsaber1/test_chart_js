@@ -8,7 +8,11 @@ function App() {
   return (
     <>
       <div>this is a test app  </div>
+      <LineGraph />
+      <br/><br/>
       <BarChart />
+      <br/><br/>
+      <PieChart />
 
     </>
   )

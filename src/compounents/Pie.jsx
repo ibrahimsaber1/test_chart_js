@@ -7,9 +7,19 @@ import {
   ArcElement
 } from "chart.js";
 
+import {PieData} from "../fakeData.jsx"
+
+
+ChartJS.register(
+  Tooltip,
+  Legend,
+  ArcElement
+)
 
 
 export const PieChart = () => {
 
-    return <> hi from the pie compounent</> ;
+    const options ={} ; 
+
+    return <Pie data={PieData} options={options}  /> ;
 };
