@@ -1,0 +1,261 @@
+.playground-container {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.playground-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.playground-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Controls Panel */
+.controls-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.control-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.control-section label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.control-section input,
+.control-section select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    color: inherit;
+    font-size: 0.95rem;
+}
+
+/* Color Picker */
+.color-picker-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 30px;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-picker-row label {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.color-picker-row select {
+    padding: 6px;
+    font-size: 0.85rem;
+}
+
+.color-preview {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Export Buttons */
+.export-btn,
+.import-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    background: rgba(100, 108, 255, 0.3);
+    border: 1px solid rgba(100, 108, 255, 0.5);
+    border-radius: 5px;
+    color: inherit;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+}
+
+.export-btn:hover,
+.import-btn:hover {
+    background: rgba(100, 108, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Chart Display */
+.chart-display-panel {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-wrapper {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Data Table Section */
+.data-table-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.table-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.table-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.table-controls button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background: rgba(75, 192, 192, 0.3);
+    border: 1px solid rgba(75, 192, 192, 0.5);
+}
+
+.table-controls button:hover {
+    background: rgba(75, 192, 192, 0.5);
+}
+
+/* Data Table */
+.table-scroll {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.data-table th {
+    background: rgba(100, 108, 255, 0.3);
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.data-table td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-table td:first-child {
+    background: rgba(100, 108, 255, 0.2);
+    font-weight: 500;
+}
+
+.header-input,
+.row-name-input,
+.cell-input {
+    width: 100%;
+    padding: 6px 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: inherit;
+    font-size: 0.9rem;
+}
+
+.header-input {
+    font-weight: 600;
+    text-align: center;
+}
+
+.cell-input {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+.cell-input:focus,
+.header-input:focus,
+.row-name-input:focus {
+    outline: none;
+    border-color: rgba(100, 108, 255, 0.8);
+    background: rgba(100, 108, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .playground-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .controls-panel {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .control-section {
+        flex: 1;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .playground-container {
+        padding: 10px;
+    }
+    
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .table-controls {
+        width: 100%;
+    }
+    
+    .table-controls button {
+        flex: 1;
+    }
+}
